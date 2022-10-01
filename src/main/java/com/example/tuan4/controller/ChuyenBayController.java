@@ -29,7 +29,12 @@ public class ChuyenBayController {
 	@GetMapping("/duongBayNhoHon10000LonHon8000")
 	public List<ChuyenBay> chuyenBayCoDuongBayNhoHon10000VaLonHon8000() {
 		return chuyenBayRepository.findChuyenBayCoDuongBayNhoHon10000VaLonHon8000();
-
 	}
 
+	// 5. Cho biết các chuyến bay xuất phát từ Sài Gòn (SGN) đi Ban Mê Thuộc (BMV).
+	@GetMapping("/chuyenBayXuatPhatSaiGonDiBuonMeThuoc")
+	public List<ChuyenBay> chuyenBayXuatPhatSaiGonDiBuonMeThuoc(){
+		return chuyenBayRepository.findChuyenBayCoGaDiSaiGonGaDenBuonMaThuoc();
+		
+	}
 }
