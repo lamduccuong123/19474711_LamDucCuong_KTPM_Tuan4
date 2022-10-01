@@ -39,8 +39,8 @@ public class ChuyenBayController {
 	}
 
 	// 6. Có bao nhiêu chuyến bay xuất phát từ Sài Gòn (SGN).
-	@GetMapping("/chuyenBayXuatPhatTuSaiGon")
-	public List<ChuyenBay> chuyenBayXuatPhatTuSaiGon() {
+	@GetMapping("/soChuyenBayXuatPhatTuSaiGon")
+	public Integer chuyenBayXuatPhatTuSaiGon() {
 		return chuyenBayRepository.findChuyenBayCoGaDiSaiGon();
 
 	}
