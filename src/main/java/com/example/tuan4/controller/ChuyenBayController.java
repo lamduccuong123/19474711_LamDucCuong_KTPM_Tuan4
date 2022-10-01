@@ -42,6 +42,7 @@ public class ChuyenBayController {
 	@GetMapping("/soChuyenBayXuatPhatTuSaiGon")
 	public Integer chuyenBayXuatPhatTuSaiGon() {
 		return chuyenBayRepository.findChuyenBayCoGaDiSaiGon();
-
 	}
+	
+	
 }

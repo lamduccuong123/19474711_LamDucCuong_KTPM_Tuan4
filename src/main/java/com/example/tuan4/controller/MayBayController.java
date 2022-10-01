@@ -23,4 +23,10 @@ public class MayBayController {
 		return mayBayRepository.getMayBayByTamBay();
 	}
 
+	// 7. Có bao nhiêu loại máy báy Boeing.
+	@GetMapping("/loaiMayBayBoeing")
+	public Integer getLoaiMayBayBoeing() {
+		return mayBayRepository.getLoaiMayBayBoeing();
+	}
+
 }
