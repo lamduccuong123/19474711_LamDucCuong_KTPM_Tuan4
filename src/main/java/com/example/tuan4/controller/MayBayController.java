@@ -28,12 +28,20 @@ public class MayBayController {
 	public Integer getLoaiMayBayBoeing() {
 		return mayBayRepository.getLoaiMayBayBoeing();
 	}
-	
-	//11.	Cho biết mã số của các loại máy bay mà nhân viên có họ Nguyễn có thể lái.
+
+	// 11. Cho biết mã số của các loại máy bay mà nhân viên có họ Nguyễn có thể lái.
 	@GetMapping("/mayBayPhiCongHoNguyen")
 	public List<MayBay> getMayBayPhiCongHoNguyen() {
 		return mayBayRepository.getMayBayPhiCongHoNguyen();
 	}
-	
 
+	// 13. Cho biết các loại máy bay có thể thực hiện chuyến bay VN280.
+	@GetMapping("/mayBayBayDuocChuyenVN280")
+	public List<MayBay> getMayBayBayDuocChuyenVN280() {
+		return mayBayRepository.getMayBayBayDuocChuyenVN280();
+	}
+	
+	
+	
+	
 }
