@@ -22,6 +22,12 @@ public class NhanVienController {
 	@GetMapping("/nhanVienLuongDuoi10000")
 	public List<NhanVien> nhanVienLuongDuoi10000() {
 		return nhanVienRepository.findNhanVienbyLuongNhoHon10000();
-
 	}
+
+	// 8. Cho biết tổng số lương phải trả cho các nhân viên.
+	@GetMapping("/tongLuongNhanVien")
+	public Double getTongLuongNhanVien() {
+		return nhanVienRepository.getTongLuongNhanVien();
+	}
+
 }
