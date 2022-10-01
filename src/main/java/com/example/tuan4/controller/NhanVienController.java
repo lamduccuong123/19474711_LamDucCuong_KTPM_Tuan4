@@ -47,5 +47,14 @@ public class NhanVienController {
 	public List<String> getPhiCongLaiDuocCaBoeingVaAirbus() {
 		return nhanVienRepository.getPhiCongLaiDuocCaBoeingVaAirbus();
 	}
-
+	
+	//15.	Cho biết tên của các phi công lái máy bay Boeing.
+	@GetMapping("/phiCongLaiBoeing")
+	public List<String> getTenPhiCongBoeing() {
+		return nhanVienRepository.getTenPhiCongBoeing();
+	}
+	
+	
+	
+	
 }
