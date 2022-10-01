@@ -28,5 +28,12 @@ public class MayBayController {
 	public Integer getLoaiMayBayBoeing() {
 		return mayBayRepository.getLoaiMayBayBoeing();
 	}
+	
+	//11.	Cho biết mã số của các loại máy bay mà nhân viên có họ Nguyễn có thể lái.
+	@GetMapping("/mayBayPhiCongHoNguyen")
+	public List<MayBay> getMayBayPhiCongHoNguyen() {
+		return mayBayRepository.getMayBayPhiCongHoNguyen();
+	}
+	
 
 }

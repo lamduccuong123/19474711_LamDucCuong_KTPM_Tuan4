@@ -17,4 +17,6 @@ public interface MayBayRepository extends JpaRepository<MayBay, String> {
 	@Query(value = "select count(*) from maybay where Loai like 'Boeing%'", nativeQuery = true)
 	Integer getLoaiMayBayBoeing();
 
+	@Query(value = "select distinct c.MaMB, Loai, TamBay from chungnhan c join nhanvien n on n.MaNV = c.MaNV join maybay m on m.MaMB = c.MaMB where Ten like 'Nguyen%'", nativeQuery = true)
+	List<MayBay> getMayBayPhiCongHoNguyen();
 }
