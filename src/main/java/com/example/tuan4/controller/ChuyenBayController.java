@@ -35,7 +35,6 @@ public class ChuyenBayController {
 	@GetMapping("/chuyenBayXuatPhatSaiGonDiBuonMeThuoc")
 	public List<ChuyenBay> chuyenBayXuatPhatSaiGonDiBuonMeThuoc() {
 		return chuyenBayRepository.findChuyenBayCoGaDiSaiGonGaDenBuonMaThuoc();
-
 	}
 
 	// 6. Có bao nhiêu chuyến bay xuất phát từ Sài Gòn (SGN).
@@ -43,6 +42,11 @@ public class ChuyenBayController {
 	public Integer chuyenBayXuatPhatTuSaiGon() {
 		return chuyenBayRepository.findChuyenBayCoGaDiSaiGon();
 	}
-	
-	
+
+	// 14. Cho biết các chuyến bay có thể ñược thực hiện bởi máy bay Airbus A320.
+	@GetMapping("/chuyenBayDuocThucHienBoiAirbusA320")
+	public List<ChuyenBay> chuyenBayDuocThucHienBoiAirbusA320() {
+		return chuyenBayRepository.chuyenBayDuocThucHienBoiAirbusA320();
+	}
+
 }
