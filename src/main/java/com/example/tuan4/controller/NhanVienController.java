@@ -36,4 +36,10 @@ public class NhanVienController {
 		return nhanVienRepository.getMaSoPhiCongBoeing();
 	}
 
+	// 10. Cho biết các nhân viên có thể lái máy bay có mã số 747.
+	@GetMapping("/phiCongLai747")
+	public List<NhanVien> getPhiCongLai747() {
+		return nhanVienRepository.getPhiCongLai747();
+	}
+
 }
