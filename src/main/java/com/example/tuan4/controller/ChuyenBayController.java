@@ -24,4 +24,12 @@ public class ChuyenBayController {
 		return chuyenBayRepository.findChuyenBayByGaDen("DAD");
 	}
 
+	// 4. Cho biết các chuyến bay có độ dài đường bay nhỏ hơn 10.000km và lớn hơn
+	// 8.000km.
+	@GetMapping("/duongBayNhoHon10000LonHon8000")
+	public List<ChuyenBay> chuyenBayCoDuongBayNhoHon10000VaLonHon8000() {
+		return chuyenBayRepository.findChuyenBayCoDuongBayNhoHon10000VaLonHon8000();
+
+	}
+
 }
