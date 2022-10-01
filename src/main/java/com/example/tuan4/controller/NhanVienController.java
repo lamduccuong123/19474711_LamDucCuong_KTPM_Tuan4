@@ -30,4 +30,10 @@ public class NhanVienController {
 		return nhanVienRepository.getTongLuongNhanVien();
 	}
 
+	// 9. Cho biết mã số của các phi công lái máy báy Boeing.
+	@GetMapping("/maSoPhiCongBoeing")
+	public List<String> getMaSoPhiCongBoeing() {
+		return nhanVienRepository.getMaSoPhiCongBoeing();
+	}
+
 }
