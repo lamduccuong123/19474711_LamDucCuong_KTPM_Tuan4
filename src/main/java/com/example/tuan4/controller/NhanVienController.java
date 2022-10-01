@@ -42,4 +42,10 @@ public class NhanVienController {
 		return nhanVienRepository.getPhiCongLai747();
 	}
 
+	// 12. Cho biết mã số của các phi công vừa lái được Boeing vừa lái được Airbus.
+	@GetMapping("/phiCongLaiDuocCaBoeingVaAirbus")
+	public List<String> getPhiCongLaiDuocCaBoeingVaAirbus() {
+		return nhanVienRepository.getPhiCongLaiDuocCaBoeingVaAirbus();
+	}
+
 }
