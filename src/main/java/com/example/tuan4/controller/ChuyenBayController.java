@@ -33,8 +33,15 @@ public class ChuyenBayController {
 
 	// 5. Cho biết các chuyến bay xuất phát từ Sài Gòn (SGN) đi Ban Mê Thuộc (BMV).
 	@GetMapping("/chuyenBayXuatPhatSaiGonDiBuonMeThuoc")
-	public List<ChuyenBay> chuyenBayXuatPhatSaiGonDiBuonMeThuoc(){
+	public List<ChuyenBay> chuyenBayXuatPhatSaiGonDiBuonMeThuoc() {
 		return chuyenBayRepository.findChuyenBayCoGaDiSaiGonGaDenBuonMaThuoc();
-		
+
+	}
+
+	// 6. Có bao nhiêu chuyến bay xuất phát từ Sài Gòn (SGN).
+	@GetMapping("/chuyenBayXuatPhatTuSaiGon")
+	public List<ChuyenBay> chuyenBayXuatPhatTuSaiGon() {
+		return chuyenBayRepository.findChuyenBayCoGaDiSaiGon();
+
 	}
 }
