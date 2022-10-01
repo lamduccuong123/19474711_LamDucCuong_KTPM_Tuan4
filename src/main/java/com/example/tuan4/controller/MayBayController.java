@@ -40,8 +40,12 @@ public class MayBayController {
 	public List<MayBay> getMayBayBayDuocChuyenVN280() {
 		return mayBayRepository.getMayBayBayDuocChuyenVN280();
 	}
-	
-	
-	
-	
+
+	// 16. Với mỗi loại máy bay có phi công lái cho biết mã số, loại máy báy và tổng
+	// số phi công có thể lái loại máy bay đó.
+	@GetMapping("/cau16")
+	public List<Object> getCau16() {
+		return mayBayRepository.getCau16();
+	}
+
 }

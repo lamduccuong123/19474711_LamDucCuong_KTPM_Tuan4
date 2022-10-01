@@ -19,7 +19,11 @@ public interface MayBayRepository extends JpaRepository<MayBay, String> {
 
 	@Query(value = "select distinct c.MaMB, Loai, TamBay from chungnhan c join nhanvien n on n.MaNV = c.MaNV join maybay m on m.MaMB = c.MaMB where Ten like 'Nguyen%'", nativeQuery = true)
 	List<MayBay> getMayBayPhiCongHoNguyen();
-	
+
 	@Query(value = "select distinct * from maybay where TamBay>=11979", nativeQuery = true)
 	List<MayBay> getMayBayBayDuocChuyenVN280();
+
+	@Query(value = "select m.MaMB,Loai, count(MaNV) as 'TongPhiCong' from maybay m left \r\n"
+			+ "join chungnhan c on m.MaMB = c.MaMB where c.MaNV is not null group by m.MaMB,Loai", nativeQuery = true)
+	List<Object> getCau16();
 }
