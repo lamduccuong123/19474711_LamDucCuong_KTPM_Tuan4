@@ -48,5 +48,16 @@ public class ChuyenBayController {
 	public List<ChuyenBay> chuyenBayDuocThucHienBoiAirbusA320() {
 		return chuyenBayRepository.chuyenBayDuocThucHienBoiAirbusA320();
 	}
+	
+	//17.	Giả sử một hành khách muốn đi thẳng từ ga A đến ga B rồi quay trở về ga A. Cho biết các đường bay nào có thể đáp ứng yêu cầu này.
+	@GetMapping("/getDuongBayDiRoiTroVe")
+	public List<ChuyenBay> getDuongBayDiRoiTroVe() {
+
+		return chuyenBayRepository.getDuongBayDiRoiTroVe();
+	}
+
+	
+	
+	
 
 }
