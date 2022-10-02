@@ -75,4 +75,10 @@ public class NhanVienController {
 		return nhanVienRepository.soLoaiMayBayPhiCongCoTheLai();
 	}
 
+	// 25. Tìm các nhân viên không phải là phi công.
+	@GetMapping("/khongPhaiPhiCong")
+	public List<NhanVien> khongPhaiPhiCong() {
+		return nhanVienRepository.khongPhaiPhiCong();
+	}
+
 }

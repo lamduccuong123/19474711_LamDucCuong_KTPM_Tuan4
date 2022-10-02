@@ -38,4 +38,7 @@ public interface NhanVienRepository extends JpaRepository<NhanVien, String> {
 
 	@Query(value = "select MaNV, count(MaMB) as SoLoaiMayBay from chungNhan  group by MaNV ", nativeQuery = true)
 	List<Object> soLoaiMayBayPhiCongCoTheLai();
+
+	@Query(value = "select * from nhanvien n left join chungnhan c on c.MaNV = n.MaNV where c.MaNV is null", nativeQuery = true)
+	List<NhanVien> khongPhaiPhiCong();
 }
