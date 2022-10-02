@@ -72,4 +72,11 @@ public class ChuyenBayController {
 		return chuyenBayRepository.tongChiPhi();
 	}
 
+	// 20. Cho biết danh sách các chuyến bay có thể khởi hành trước 12:00
+	@GetMapping("/chuyenBayKhoiHanhTruoc12Gio")
+	public List<ChuyenBay> chuyenBayKhoiHanhTruoc12Gio() {
+
+		return chuyenBayRepository.chuyenBayKhoiHanhTruoc12Gio();
+	}
+
 }

@@ -33,4 +33,7 @@ public interface ChuyenBayRepository extends JpaRepository<ChuyenBay, String> {
 
 	@Query(value = "select  GaDi, sum(ChiPhi) as TongChiPhi from chuyenbay group by GaDi", nativeQuery = true)
 	List<Object> tongChiPhi();
+
+	@Query(value = "select * from chuyenbay where Hour(GioDi) < 12", nativeQuery = true)
+	List<ChuyenBay> chuyenBayKhoiHanhTruoc12Gio();
 }
