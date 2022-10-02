@@ -87,4 +87,10 @@ public class NhanVienController {
 		return nhanVienRepository.nhanVienLuongCaoNhat();
 	}
 
+	// 27. Cho biết tổng số lương phải trả cho các phi công.
+	@GetMapping("/tongLuongPhiCong")
+	public Double tongLuongPhiCong() {
+		return nhanVienRepository.tongLuongPhiCong();
+	}
+
 }
