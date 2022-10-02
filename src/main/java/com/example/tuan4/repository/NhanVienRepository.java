@@ -31,4 +31,11 @@ public interface NhanVienRepository extends JpaRepository<NhanVien, String> {
 
 	@Query(value = "select MaNV from chungnhan group by MaNV having count(MaMB) = 3", nativeQuery = true)
 	List<String> phiCongChiLaiDuoc3LoaiMayBay();
+
+	// Chua biet lam
+//	@Query(value = "", nativeQuery = true)
+//	List<Object> getPhiCongLaiNhieuHon3LoaiMayBay();
+
+	@Query(value = "select MaNV, count(MaMB) as SoLoaiMayBay from chungNhan  group by MaNV ", nativeQuery = true)
+	List<Object> soLoaiMayBayPhiCongCoTheLai();
 }

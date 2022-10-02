@@ -60,4 +60,19 @@ public class NhanVienController {
 		return nhanVienRepository.phiCongChiLaiDuoc3LoaiMayBay();
 	}
 
+	// Chua biet lam
+	// 23. Với mỗi phi công có thể lái nhiều hơn 3 loại máy bay, cho biết mã số phi
+	// công và tầm bay lớn nhất của các loại máy bay mà phi công đó có thể lái.
+//	@GetMapping("/getPhiCongLaiNhieuHon3LoaiMayBay")
+//	public List<Object> getPhiCongLaiNhieuHon3LoaiMayBay() {
+//		return nhanVienRepository.getPhiCongLaiNhieuHon3LoaiMayBay();
+//	}
+
+	// 24. Với mỗi phi công cho biết mã số phi công và tổng số loại máy bay mà phi
+	// công đó có thể lái.
+	@GetMapping("/soLoaiMayBayPhiCongCoTheLai")
+	public List<Object> soLoaiMayBayPhiCongCoTheLai() {
+		return nhanVienRepository.soLoaiMayBayPhiCongCoTheLai();
+	}
+
 }
