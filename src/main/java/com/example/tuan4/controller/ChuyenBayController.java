@@ -82,4 +82,11 @@ public class ChuyenBayController {
 	public List<Object> soChuyenBayXuatPhatTruoc12GioTaiMoiGa() {
 		return chuyenBayRepository.soChuyenBayXuatPhatTruoc12GioTaiMoiGa();
 	}
+	
+	//28.	Tìm các chuyến bay có thể được thực hiện bởi tất cả các loại máy bay Boeing.
+	@GetMapping("/chuyenBayCoTheThucHienBoeing")
+	public List<ChuyenBay> chuyenBayCoTheThucHienBoeing() {
+
+		return chuyenBayRepository.chuyenBayCoTheThucHienBoeing();
+	}
 }
