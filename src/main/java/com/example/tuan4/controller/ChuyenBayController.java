@@ -53,7 +53,6 @@ public class ChuyenBayController {
 	// A. Cho biết các đường bay nào có thể đáp ứng yêu cầu này.
 	@GetMapping("/getDuongBayDiRoiTroVe")
 	public List<ChuyenBay> getDuongBayDiRoiTroVe() {
-
 		return chuyenBayRepository.getDuongBayDiRoiTroVe();
 	}
 
@@ -61,7 +60,6 @@ public class ChuyenBayController {
 	// khởi hành từ ga đó.
 	@GetMapping("/chuyenBayKhoiHanhTuGa")
 	public List<Object> chuyenBayKhoiHanhTuGa() {
-
 		return chuyenBayRepository.getChuyenBayKhoiHanhTuGa();
 	}
 
@@ -75,8 +73,13 @@ public class ChuyenBayController {
 	// 20. Cho biết danh sách các chuyến bay có thể khởi hành trước 12:00
 	@GetMapping("/chuyenBayKhoiHanhTruoc12Gio")
 	public List<ChuyenBay> chuyenBayKhoiHanhTruoc12Gio() {
-
 		return chuyenBayRepository.chuyenBayKhoiHanhTruoc12Gio();
 	}
 
+	// 21. Với mỗi địa điểm xuất phát cho biết có bao nhiêu chuyến bay có thể khởi
+	// hành trước 12:00.
+	@GetMapping("/soChuyenBayXuatPhatTruoc12GioTaiMoiGa")
+	public List<Object> soChuyenBayXuatPhatTruoc12GioTaiMoiGa() {
+		return chuyenBayRepository.soChuyenBayXuatPhatTruoc12GioTaiMoiGa();
+	}
 }
