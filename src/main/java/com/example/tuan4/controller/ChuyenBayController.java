@@ -65,4 +65,11 @@ public class ChuyenBayController {
 		return chuyenBayRepository.getChuyenBayKhoiHanhTuGa();
 	}
 
+	// 19. Với mỗi ga có chuyến bay xuất phát từ đó cho biết tổng chi phí phải trả
+	// cho phi công lái các chuyến bay khởi hành từ ga đó.
+	@GetMapping("/tongChiPhi")
+	public List<Object> tongChiPhi() {
+		return chuyenBayRepository.tongChiPhi();
+	}
+
 }
