@@ -41,4 +41,7 @@ public interface NhanVienRepository extends JpaRepository<NhanVien, String> {
 
 	@Query(value = "select * from nhanvien n left join chungnhan c on c.MaNV = n.MaNV where c.MaNV is null", nativeQuery = true)
 	List<NhanVien> khongPhaiPhiCong();
+
+	@Query(value = "select MaNV from nhanvien order by Luong DESC limit 1", nativeQuery = true)
+	List<String> nhanVienLuongCaoNhat();
 }

@@ -81,4 +81,10 @@ public class NhanVienController {
 		return nhanVienRepository.khongPhaiPhiCong();
 	}
 
+	// 26. Cho biết mã số của các nhân viên có lương cao nhất.
+	@GetMapping("/nhanVienLuongCaoNhat")
+	public List<String> nhanVienLuongCaoNhat() {
+		return nhanVienRepository.nhanVienLuongCaoNhat();
+	}
+
 }
